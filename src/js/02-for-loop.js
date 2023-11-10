@@ -86,21 +86,21 @@
  * Например, если min=0 и max=5, то диапазон 0-5, и в нём два чётных числа - 2 и 4, их сумма 6.
  */
 
-let min = 0;
-let max = 100;
-let total = 0;
-let count = 0;
+// let min = 0;
+// let max = 100;
+// let total = 0;
+// let count = 0;
 
-for (let i = min; i <= max; i++) {
-  if (i % 7 !== 0) {
-    continue;
-  }
+// for (let i = min; i <= max; i++) {
+//   if (i % 7 !== 0) {
+//     continue;
+//   }
 
-  count++;
-}
+//   count++;
+// }
 
 // console.log(total);
-console.log(count);
+// console.log(count);
 // debugger;
 // for (let i = 1; i < 100; i++) {
 //   if (i % 7 === 0 && i % 3 === 0) {
@@ -108,3 +108,11 @@ console.log(count);
 //     continue;
 //   }
 // }
+
+const discount1 = 0;
+
+const x = 10;
+
+const discount2 = `${x}`;
+const message = `Age = ${x}`;
+console.log(message);
