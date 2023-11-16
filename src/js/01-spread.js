@@ -1,19 +1,19 @@
 /*
- * Операция spread (распыление)
- * - Array.prototype.concat() и аналог через spread
+ * Операція spread
+ * - Array.prototype.concat() та аналог через spread
  */
 
 /*
- * Поиск самой маленькой или большой температуры (числа)
+ * Пошук найменшої або найбільшої температури (числа)
  */
 
 const temps = [21, 17, 29, 24];
 
 /*
- * Сшиваем несколько массивов в один через concat() и spread
+ * Зшиваємо кілька масивів в один через concat() та spread
  */
 
 /*
- * Распыление объектов
- * - Object.prototype.assign() и spread
+ * Spread об'єктів
+ * - Object.prototype.assign() та spread
  */
