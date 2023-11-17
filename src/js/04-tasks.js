@@ -85,3 +85,11 @@ console.log(avg);
 // callback()
 // callback()
 // callback()
+
+const user = {
+  age: 123,
+};
+
+user.age = 'Hello';
+
+console.log(user.age);
