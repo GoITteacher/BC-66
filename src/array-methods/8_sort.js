@@ -89,3 +89,96 @@ let cars = [
     onSale: false,
   },
 ];
+
+/* 
+
+{
+  make: 'Honda',
+  model: 'CR-V',
+  type: 'suv',
+  amount: 14,
+  price: 24045,
+  onSale: true,
+}
+
+*/
+
+const task1 = cars.map(car => car.model);
+const task2 = cars.map(car => {
+  const obj = {
+    model: car.model && car.make,
+    make: car.make,
+  };
+
+  return obj;
+});
+
+const task3 = cars.filter(car => car.price > 25000);
+
+const task4 = cars.find(car => car.make === 'Toyota');
+
+console.log(task3);
+
+// =================
+// cars.sort((a, b) => {
+//   return a.amount - b.amount;
+// });
+
+// cars.sort((a, b) => {
+//   if (a.make === b.make) {
+//     if (a.type === b.type) {
+//       return a.price - b.price;
+//     }
+//     return a.type.localeCompare(b.type);
+//   }
+//   return a.make.localeCompare(b.make);
+// });
+
+// console.table(cars);
+
+// const arr = [5, 1, 1, 4, 7, 9];
+// const result = [...arr].sort((left, right) => {
+//   return left - right;
+// });
+
+// const arr = ['bawdef', 'awd', 'cawd', 'awdeaf', 'drgdrg'];
+
+// const result = [...arr].sort((b, a) => {
+//   return a.localeCompare(b);
+// });
+
+// console.log(result);
+
+// ======================
+
+// повернути масив лише з make
+// відсортувати за make
+// лише ті які коштують > 25
+
+// filter.map.sort
+// filter.sort.map
+// map.sort.filter
+// map.filter.map
+// sort.filter.map
+//
+
+// filter.map.sort
+
+let totalIteration = 0;
+
+// const result = cars
+//   .map(car => {
+//     totalIteration++;
+//     return car.make;
+//   })
+//   .sort((a, b) => {
+//     totalIteration++;
+//     return a.localeCompare(b);
+//   })
+//   .filter((element, index, array) => {
+//     totalIteration++;
+//     return car === 'Toyota';
+//   });
+
+// console.log(totalIteration);
+// console.log(result);

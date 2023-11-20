@@ -11,3 +11,20 @@
 */
 
 let array = [1, 3, 56, 1, 5, 78, 2, 6];
+
+// const result = array.filter(potato => {
+//   return potato > 30;
+// });
+
+// const result1 = array.filter(el => el > 36);
+
+// const result3 = array.filter(el => {
+//   return el % 2 === 0;
+// });
+
+const result4 = array.filter((el, idx) => {
+  console.log(idx, el > 1000);
+  return el > 10;
+});
+
+console.log(result4);

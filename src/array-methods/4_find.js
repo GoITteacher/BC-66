@@ -22,3 +22,9 @@ let users = [
     phone: '+280996161',
   },
 ];
+
+// const result = users.find((el, idx, arr) => {
+//   return 0;
+// });
+
+// console.log(result);
