@@ -83,3 +83,20 @@ const cars = [
     onSale: false,
   },
 ];
+
+function carsTemplate(cars) {
+  return cars
+    .map(el => {
+      return `<tr class="car-item">
+    <td class="car-make">${el.make}</td>
+    <td>${el.model}</td>
+    <td>${el.type}</td>
+    <td>${el.amount}</td>
+    <td>${el.price}</td>
+  </tr>`;
+    })
+    .join('\n');
+}
+
+const tableElem = document.querySelector('.js-table > tbody');
+tableElem.insertAdjacentHTML('beforeend', carsTemplate(cars));
