@@ -31,9 +31,13 @@ boxRef.addEventListener('mouseleave', e => {
 
 // =========================
 
-boxRef.addEventListener('mousemove', evt => {
+// boxRef.addEventListener('mousemove', evt => {
+//   console.log(evt);
+//   const child = boxRef.firstElementChild;
+//   child.style.left = evt.x - 50 + 'px';
+//   child.style.top = evt.y - 50 + 'px';
+// });
+
+document.addEventListener('selectstart', evt => {
   console.log(evt);
-  const child = boxRef.firstElementChild;
-  child.style.left = evt.x - 50 + 'px';
-  child.style.top = evt.y - 50 + 'px';
 });
