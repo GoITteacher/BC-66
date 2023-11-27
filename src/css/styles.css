@@ -24,3 +24,20 @@ input {
   padding-top: 40px;
   padding-bottom: 40px;
 }
+
+.wrong {
+  border: 1px solid red;
+}
+
+.my-test-box {
+  background-color: black;
+  width: 200px;
+}
+
+.my-test-box.down {
+  height: 100px;
+}
+
+.my-test-box.up {
+  height: 200px;
+}
