@@ -190,3 +190,6 @@ function onCommentsListMouseOut(event) {
   refs.postList.style.height = '300px';
   event.currentTarget.style.height = '100px';
 }
+
+const html1 = '';
+const html2 = '';
