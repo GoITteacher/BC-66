@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "start": "npx parcel src/*.html",
-    "build": "npx parcel build src/*.html --public-url /js-example/",
+    "build": "npx parcel build src/*.html --public-url /BC-66/",
     "push": "git add . && git commit -m 'update'; git push"
   },
   "repository": {
@@ -23,6 +23,7 @@
     "parcel-plugin-handlebars-precompile": "^1.0.2"
   },
   "dependencies": {
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "simplelightbox": "^2.14.2"
   }
 }

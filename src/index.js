@@ -1,16 +1,15 @@
-class User {
-  name = 'Test';
-  age = 20;
-  constructor(name) {
-    this.name = name || name;
-  }
+/* 
+import { Cat, sayHello as say } from './scripts/cat.js';
+import { x1, y1, t1 } from './scripts/dog.js';
+import { x2, y2, t2 } from './scripts/user.js';
 
-  showInfo() {
-    console.log(this.name);
-  }
-}
+const cat1 = new Cat();
+const result = say(5, 5);
+console.log(result);
+*/
+// =========================
 
-const user1 = new User('Max');
-const user2 = new User('Max');
-user1.showInfo();
-user2.showInfo();
+// import { x2 } from './scripts/user.js';
+// import myData from './scripts/user.js';
+
+// =========================
