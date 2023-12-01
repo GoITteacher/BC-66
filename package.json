@@ -1,11 +1,11 @@
 {
   "name": "js-example",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "scripts": {
     "start": "npx parcel src/*.html",
     "build": "npx parcel build src/*.html --public-url /js-example/",
-    "push": "git add . && git commit -m 'update'"
+    "push": "git add . && git commit -m 'update'; git push"
   },
   "repository": {
     "type": "git",
