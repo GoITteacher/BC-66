@@ -1,6 +1,6 @@
 {
   "name": "js-example",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "scripts": {
     "start": "npx parcel src/*.html",
