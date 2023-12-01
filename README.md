@@ -1,42 +1,44 @@
 # Theory
 
-- Терминал
+- термінал
   - [Шпаргалка 1](https://tproger.ru/translations/bash-cheatsheet/)
-  - [Шпаргалка 2](https://habr.com/ru/company/ruvds/blog/445270/)
-  - Открыть
+  - [Шпаргалка 2](https://habr.com/ua/company/ruvds/blog/445270/)
+  - Відкрити
     - `control + ~`
     - `view > teminal`
-    - через палитру `command + shift + p`
-  - Основные полезные команды
-    - путь (pwd)
+    - через палітру `command+shift+p`
+  - Основні корисні команди
+    - Шлях (pwd)
     - лист (ls)
-    - навигация (cd)
-    - очистка `clear` или `control + l`
-    - создание файлов (touch)
-    - создание папок (mkdir)
-    - переименование/перемещение (mv)
-    - удаление (rm)
-- Node.js и npm
-  - установка
-  - инициализация и package.json
+    - Навігація (cd)
+    - очищення `clear` або `control + l`
+    - Створення файлів (touch)
+    - Створення папок (mkdir)
+    - перейменування/переміщення (mv)
+    - Видалення (rm)
+- Node.js та npm
+  - встановлення
+  - ініціалізація та package.json
   - [npmjs.com](https://www.npmjs.com/)
-  - работа с пакетами
-    - установка (https://www.npmjs.com/package/uniqid)(https://www.npmjs.com/package/date-fns)
-    - удаление
-  - npm-скрипты
-    - pre и post
-- Транспиляция кода
+  - робота з пакетами
+    - [встановлення](https://www.npmjs.com/package/uniqid)
+    - [date-fns](https://www.npmjs.com/package/date-fns)
+    - Видалення
+  - npm-скрипти
+    - pre та post
+- Транспіляція коду
   - [Babel](https://babeljs.io/)
-  - CLI и npm-скрипты
-  - Пресеты
+  - CLI та npm-скрипти
+  - Пресети
   - [Browserslist](https://github.com/browserslist/browserslist)
-- [Сборщик Parcel](https://parceljs.org/)
-- [ECMAScript модули](https://exploringjs.com/es6/ch_modules.html)
-  - Дефолтный (default) експорт и импорт
-  - Именованный (named) експорт и импорт
-  - Импорт пространства имён (namespace)
+- [Складальник Parcel](https://parceljs.org/)
+- [ECMAScript модулі](https://exploringjs.com/es6/ch_modules.html)
+  - Дефолтний (default) експорт та імпорт
+  - Іменований (named) експорт та імпорт
+  - Імпорт простору імен (namespace)
 
 ---
-- [Теория 1](https://flexiple.com/javascript/javascript-require-vs-import/)
-- [Теория 2](https://blog.bitsrc.io/javascript-require-vs-import-47827a361b77)
-- [Теория 3](https://stackoverflow.com/questions/31354559/using-node-js-require-vs-es6-import-export)
+
+- [Теорія 1](https://flexiple.com/javascript/javascript-require-vs-import/)
+- [Теорія 2](https://blog.bitsrc.io/javascript-require-vs-import-47827a361b77)
+- [Теорія 3](https://stackoverflow.com/questions/31354559/using-node-js-require-vs-es6-import-export)
