@@ -18,6 +18,7 @@
 - Session Storage
 
 ---
+
 ## Шаблонизация
 
 - [Handlebars](https://handlebarsjs.com/)
