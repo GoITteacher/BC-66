@@ -7,6 +7,24 @@ import '../css/common.css';
  * - Не забываем чистить таймер
  */
 
-/*
- * Функции
- */
+let timeoutId;
+const refs = {
+  spam: document.querySelector('.js-alert'),
+};
+
+setTimeout(showAlert, 3000);
+
+refs.spam.addEventListener('click', () => {
+  hideAlert();
+  clearTimeout(timeoutId);
+});
+
+function showAlert() {
+  refs.spam.classList.add('is-visible');
+  timeoutId = setTimeout(hideAlert, 10000);
+}
+
+function hideAlert() {
+  console.log('hide');
+  refs.spam.classList.remove('is-visible');
+}
