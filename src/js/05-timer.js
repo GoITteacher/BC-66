@@ -20,7 +20,7 @@ const timer = {
 
   start() {
     if (this.isActive) return;
-    // this.initTime = new Date('2028-01-01');
+    this.initTime = new Date();
     this.isActive = true;
     console.log('start');
     this.intervalId = setInterval(() => {
