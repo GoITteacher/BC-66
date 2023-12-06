@@ -6,30 +6,37 @@
  *  - Promise.prototype.then(onResolve, onReject)
  */
 
-// promise.then(onFulfilled, onRejected);
-
-const promise = new Promise((resolve, reject) => {
-  const rand = Math.random();
+/* const promise = new Promise(resolve => {
+  const delay = Math.round(Math.random() * 7) * 1000;
+  console.log(delay);
   setTimeout(() => {
-    if (rand > 0.5) {
-      resolve(rand);
+    const random = Math.random();
+    if (random >= 0.5) {
+      resolve('Приходьте');
     } else {
-      reject('Sorry!');
+      //y('Вибачте, не вийшло');
     }
-  }, 10);
-});
+  }, delay);
+}); */
 
-// promise.then(onFulfilled).catch(onRejected);
+/* 
 
-// function onFulfilled(result) {
-//   console.log('onFulfilled -> onFulfilled');
-//   console.log(`✅ ${result}`);
-// }
 
-// function onRejected(error) {
-//   console.log('onRejected -> onRejected');
-//   console.log(`❌ ${error}`);
-// }
+
+
+*/
+
+// promise.then(null, onRejected);
+
+/* function onFulfilled(result) {
+  console.log('onFulfilled -> onFulfilled');
+  console.log(`✅ ${result}`);
+}
+
+function onRejected(error) {
+  console.log('onRejected -> onRejected');
+  console.log(`❌ ${error}`);
+} */
 
 /*
  * Цепочки промисов (chaining)
@@ -37,28 +44,35 @@ const promise = new Promise((resolve, reject) => {
  * Promise.prototype.finally()
  */
 
+// const promise = new Promise((resolve, reject) => {
+//   resolve(5);
+// });
+
+/* const promise = fetch('https://pokeapi.co/api/v2/pokemon');
+
 promise
-  .then(value1 => {
-    console.log(value1, '-> promise1');
-    return [value1];
+  .then(result => {
+    return result.json();
   })
-  .catch(err => {
-    console.log('Error', err);
-    return Promise.reject('err');
+  .then(data => {
+    return data.results[0];
   })
-  .then(value2 => {
-    if (value2.length !== 0) {
-      console.log();
-    }
-    return 'food';
+  .then(pokemon => {
+    const pokemonPromise = fetch(pokemon.url);
+    return pokemonPromise;
   })
-  .then(value3 => {
-    return value3;
+  .then(result => {
+    return result.json();
   })
-  .then(value4 => {
-    console.log('value4->', value4);
-  })
-  .catch(() => {
-    console.log('last catch');
-  })
-  .finally(() => {});
+  .then(pokemonInfo => {
+    console.log(pokemonInfo);
+  });
+ */
+
+// Promise.then()
+//   .catch()
+//   .then()
+//   .catch()
+//   .finally(() => {
+//     Notify.show('Приємного перегляду');
+//   });
