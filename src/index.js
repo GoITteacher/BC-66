@@ -1,3 +1,3 @@
 import './css/common.css';
-import { PASSWORD } from './consts';
+import { PASSWORD } from './const';
 console.log(PASSWORD);
