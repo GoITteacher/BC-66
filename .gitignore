@@ -1,6 +1,6 @@
 # MacOS attrs
 .DS_Store
-
+const.js
 # Logs
 logs
 *.log
