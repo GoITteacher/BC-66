@@ -25,7 +25,8 @@
   - [Pixabay API](https://pixabay.com/api/docs/#api_search_images)
 - Документация REST API
 - Аутентификация
-  - [https://newsapi.org/](https://newsapi.org/) key-c8747511a2c34730a83caaff4f3693e7
+  - [https://newsapi.org/](https://newsapi.org/)
+    key-c8747511a2c34730a83caaff4f3693e7
   - [https://weatherstack.com/](https://weatherstack.com/)
   - [https://pixabay.com/api/docs/](https://pixabay.com/api/docs/)
 - Библиотеки-обёртки
@@ -43,7 +44,9 @@
   - [https://lpj-weather-service.herokuapp.com/](https://lpj-weather-service.herokuapp.com/)
 
 ---
+
 ## Доп Мат
+
 - [DNS](https://selectel.ru/blog/dns-server/)
 - [Презентация](https://drive.google.com/file/d/1KcDIQuyn2IBwESAjg96hH-nniozG3L3W/view?usp=sharing)
 - [Версии HTTP](https://developer.mozilla.org/ru/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP)
