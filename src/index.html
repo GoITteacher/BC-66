@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -11,44 +11,17 @@
       integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="css/common.css">
-</head>
-<body>
-
-    <div class="header">
-        <form class="form-inline search-form js-search-form">
-            <div class="form-group">
-              <input type="text" class="form-control" name="query" />
-            </div>
-      
-            <button type="submit" class="btn btn-primary">Искать</button>
-          </form>
-    </div>
-
-    <ul class="news-list js-article-list">
-      
-      
-
-
-      
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/loader.css" />
+  </head>
+  <body>
+    <ul>
+      <li><a href="./pages/index1.html">Load More</a></li>
+      <li><a href="./pages/index2.html">Scroll</a></li>
+      <li><a href="./pages/index3.html">PREV NEXT</a></li>
     </ul>
-
-
-
-    <button disabled
-      type="button"
-      class="btn btn-primary button js-btn-load"
-      data-action="load-more"
-    >
-      <span
-        class="spinner-border spinner-border-sm spinner is-hidden"
-        role="status"
-        aria-hidden="true"
-      ></span>
-
-      <span class="label">Показать ещё</span>
-    </button>
-
-    <script src="./js/01-script.js"></script>
-</body>
+    <div class="backdrop">
+      <span class="loader"></span>
+    </div>
+  </body>
 </html>
