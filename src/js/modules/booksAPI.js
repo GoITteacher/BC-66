@@ -1,74 +1,56 @@
-import axios from 'axios';
-
-const axiosV2 = axios.create({
-  baseURL: 'http://localhost:4040',
-});
-
-const BASE_URL = 'http://localhost:4040';
-
 export class BooksAPI {
-  getAllBooks() {
-    return fetch(`${BASE_URL}/books`).then(response => {
-      return response.json();
-    });
+  static BASE_URL = 'http://localhost:3000';
+  static END_POINT = '/books';
+
+  constructor() {
+    this.url = `${BooksAPI.BASE_URL}${BooksAPI.END_POINT}`;
+  }
+
+  getBooks() {
+    return fetch(this.url).then(res => res.json());
   }
 
   createBook(book) {
     const options = {
       method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(book),
-      headers: {
-        'Content-Type': 'application/json; charset=UTF-8',
-      },
     };
 
-    return fetch(`${BASE_URL}/books`, options);
+    return fetch(this.url, options).then(res => {
+      if (res.ok) {
+        return res.json();
+      } else {
+        throw new Error('Error create book!');
+      }
+    });
   }
 
-  deleteBook(id) {
-    axiosV2.delete(`/books/${id}`);
-
-    // fetch(`${BASE_URL}`, {
-    //   method: 'DELETE',
-    // });
-  }
-
-  resetBook({
-    bookId: id,
-    bookDesc: desc,
-    bookTitle: title,
-    bookAuthor: author,
-  }) {
-    const book = {
-      desc,
-      title,
-      author,
-    };
-
+  resetBook({ id, ...book }) {
     const options = {
       method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(book),
-      headers: {
-        'Content-Type': 'application/json; charset=UTF-8',
-      },
     };
 
-    fetch(`${BASE_URL}/books/${id}`, options);
+    return fetch(`${this.url}/${id}`, options).then(res => res.json());
   }
 
   updateBook({ id, ...book }) {
     const options = {
       method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(book),
-      headers: {
-        'Content-Type': 'application/json; charset=UTF-8',
-      },
     };
 
-    fetch(`${BASE_URL}/books/${id}`, options);
+    return fetch(`${this.url}/${id}`, options).then(res => res.json());
   }
 
-  createBookByAxios(book) {
-    return axiosV2.post('/books', book);
+  deleteBook(id) {
+    const options = {
+      method: 'DELETE',
+    };
+
+    return fetch(`${this.url}/${id}`, options).then(res => res.json());
   }
 }
