@@ -41,6 +41,7 @@ function loadMore(entries, observer) {
       newsAPI.getArticles().then(result => {
         const rectangle =
           refs.articleList.lastElementChild.getBoundingClientRect();
+        console.log(rectangle);
 
         renderArticles(result.articles);
 
