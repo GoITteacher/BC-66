@@ -1,31 +1,31 @@
-import axios2 from 'axios';
+import axios from 'axios';
 
-const axios = axios2.create({
+const axios2 = axios.create({
   baseURL: 'http://localhost:3000/books',
-  headers: { test: 'hello', myKey: 'KUKU-KEY' },
-  params: {
-    key: '213132434234234',
+  headers: {
+    test: 'Hello',
+    api_key: '123424353',
   },
 });
 
-export class BooksApi {
+export class BooksAPI {
   getBooks() {
-    return axios.get().then(res => res.data);
+    return axios2.get();
   }
 
   createBook(book) {
-    return axios.post('', book).then(res => res.data);
-  }
-
-  updateBook({ id, ...book }) {
-    return axios.patch(`/${id}`, book);
+    return axios2.post('', book);
   }
 
   resetBook({ id, ...book }) {
-    return axios.put(`/${id}`, book).then(res => res.data);
+    return axios2.put(`/${id}`, book);
+  }
+
+  updateBook({ id, ...book }) {
+    return axios2.patch(`/${id}`, book);
   }
 
   deleteBook(id) {
-    return axios.delete(`/${id}`);
+    return axios2.delete(`/${id}`);
   }
 }
