@@ -1,4 +1,4 @@
-import { BooksApi } from './modules/booksAPI';
+import { BooksAPI } from './modules/booksAPI';
 // ===================================================
 
 const refs = {
@@ -8,7 +8,7 @@ const refs = {
   deleteFormElem: document.querySelector('.js-delete-form'),
   bookListElem: document.querySelector('.js-article-list'),
 };
-const booksAPI = new BooksApi();
+const booksAPI = new BooksAPI();
 // ===================================================
 refs.createFormElem.addEventListener('submit', onBookCreate);
 refs.updateFormElem.addEventListener('submit', onBookUpdate);
@@ -106,10 +106,9 @@ function renderBooks(books) {
 }
 
 // ===================================================
-function onLoadPage() {
-  booksAPI.getBooks().then(books => {
-    renderBooks(books);
-  });
+async function onLoadPage() {
+  const books = await booksAPI.getBooks();
+  renderBooks(books);
 }
 onLoadPage();
 // ===================================================
