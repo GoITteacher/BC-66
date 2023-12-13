@@ -15,7 +15,7 @@ refs.updateFormElem.addEventListener('submit', onBookUpdate);
 refs.resetFormElem.addEventListener('submit', onBookReset);
 refs.deleteFormElem.addEventListener('submit', onBookDelete);
 
-function onBookCreate(e) {
+async function onBookCreate(e) {
   e.preventDefault();
   const book = {};
   const formData = new FormData(e.target);
@@ -24,19 +24,18 @@ function onBookCreate(e) {
     book[key] = value;
   });
 
-  booksAPI
-    .createBook(book)
-    .then(createdBook => {
-      const markup = bookTemplate(createdBook);
-      refs.bookListElem.insertAdjacentHTML('beforeend', markup);
-    })
-    .catch(err => {
-      console.log(err);
-    });
+  try {
+    const createdBook = await booksAPI.createBook(book);
+    const markup = bookTemplate(createdBook);
+    refs.bookListElem.insertAdjacentHTML('beforeend', markup);
+  } catch (err) {
+    console.log(err);
+  }
 
   e.target.reset();
 }
-function onBookUpdate(e) {
+
+async function onBookUpdate(e) {
   e.preventDefault();
   const book = {};
   const formData = new FormData(e.target);
@@ -47,17 +46,16 @@ function onBookUpdate(e) {
     book[key] = value;
   });
 
-  booksAPI
-    .updateBook(book)
-    .then(newBook => {
-      rerenderBook(newBook);
-    })
-    .catch(err => {
-      console.log(err);
-    });
+  try {
+    const newBook = await booksAPI.updateBook(book);
+    rerenderBook(newBook);
+  } catch (err) {
+    console.log(err);
+  }
+
   e.target.reset();
 }
-function onBookReset(e) {
+async function onBookReset(e) {
   e.preventDefault();
   const book = {};
   const formData = new FormData(e.target);
@@ -66,23 +64,22 @@ function onBookReset(e) {
     book[key] = value;
   });
 
-  booksAPI
-    .resetBook(book)
-    .then(newBook => {
-      rerenderBook(newBook);
-    })
-    .catch(err => {
-      console.log(err);
-    });
+  try {
+    const newBook = await booksAPI.resetBook(book);
+    rerenderBook(newBook);
+  } catch (err) {
+    console.log(err);
+  }
+
   e.target.reset();
 }
-function onBookDelete(e) {
+async function onBookDelete(e) {
   e.preventDefault();
   const id = e.target.elements.bookId.value;
-  booksAPI.deleteBook(id).then(() => {
-    const oldBook = refs.bookListElem.querySelector(`li[data-id="${id}"]`);
-    oldBook.remove();
-  });
+  await booksAPI.deleteBook(id);
+  const oldBook = refs.bookListElem.querySelector(`li[data-id="${id}"]`);
+  oldBook.remove();
+
   e.target.reset();
 }
 
